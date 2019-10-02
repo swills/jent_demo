@@ -22,27 +22,32 @@ int main(int argc, char *argv[]) {
   char randbuf[NBYTES];
 
   jv = jent_version();
+  /*
   printf("jv: %d\n", jv);
+  */
   jvh = jent_entropy_init();
+  /*
   if (jvh == 0) {
     printf("jent_entropy_init successful\n");
   } else {
     printf("jent_entropy_init failed\n");
   }
+  */
   mrd = jent_entropy_collector_alloc(1, 0);
+  /*
   if (mrd != NULL) {
     printf("jent_entropy_collector_alloc successful\n");
   } else {
     printf("jent_entropy_collector_alloc failed\n");
   }
-
+  */
   br = jent_read_entropy(mrd, randbuf, sizeof(randbuf));
 
   for (i = 0; i < NBYTES; i++)
   {
-    // if (i > 0) printf(":");
-    printf("%d\n", randbuf[i]);
+    if (i > 0) printf(":");
+    printf("%02x", randbuf[i]+128);
   }
-
+  printf("\n");
 }
 
