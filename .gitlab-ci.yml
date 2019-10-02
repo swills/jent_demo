@@ -4,4 +4,4 @@ build:
   stage: build
   script:
     - make
-    - jent
+    - ./jent

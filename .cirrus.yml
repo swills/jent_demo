@@ -3,4 +3,4 @@ freebsd_instance:
 
 task:
   install_script: pkg install -y go git libjitterentropy
-  script: make && jent
+  script: make && ./jent
