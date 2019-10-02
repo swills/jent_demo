@@ -1,0 +1,7 @@
+build:
+  tags:
+    - FreeBSD
+  stage: build
+  script:
+    - make
+    - jent
