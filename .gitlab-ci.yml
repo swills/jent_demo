@@ -3,5 +3,4 @@ build:
     - FreeBSD
   stage: build
   script:
-    - make
-    - ./jent
+    - make test

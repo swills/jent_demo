@@ -4,3 +4,7 @@ all: jent
 
 clean:
 	rm jent
+
+test: all
+	./jent
+	ent -b jent_out
